@@ -5,15 +5,16 @@ import java.sql.SQLException;
 
 import javax.sql.DataSource;
 
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
-public class Test {
+public class TestApplication {
 	@Autowired
 	DataSource dataSource;
-	@org.junit.Test
+	@Test
 	public void contextLoads() throws SQLException {
 		System.out.println(dataSource.getClass());
 		Connection connection=dataSource.getConnection();
